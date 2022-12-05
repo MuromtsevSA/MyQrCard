@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyQrCard.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <WebView x:Name="index"  Source="index.html" HorizontalOptions="FillAndExpand"  VerticalOptions="StartAndExpand"/> 
+
+            <Entry Placeholder="Введите Email" TextColor="Black" Background="white" Text="{Binding Email}"/>
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Войти"
+                Command="{Binding NextPageCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
